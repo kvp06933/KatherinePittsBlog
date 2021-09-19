@@ -40,7 +40,7 @@ namespace KatherinePittsBlog.Models
         public IFormFile Image { get; set; }
 
         //Navigation Properties
-        public virtual IdentityUser BlogUser { get; set; }
+        public virtual BlogUser BlogUser { get; set; }
         public virtual ICollection<Post> Posts { get; set; } = new HashSet<Post>();
         
     }

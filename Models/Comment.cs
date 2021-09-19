@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using KatherinePittsBlog.Enums;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -28,10 +29,12 @@ namespace KatherinePittsBlog.Models
         [StringLength(500, ErrorMessage = "The {0} must be between {2} and {1} characters long", MinimumLength = 2)]
         public string ModeratedBody { get; set; }
 
+        public ModerationType ModerationType { get; set; }
+
         //Navigation Properties
         public virtual Post Post { get; set; }
-        public virtual IdentityUser BlogUser { get; set; }
-        public virtual IdentityUser Moderator { get; set; }
+        public virtual BlogUser BlogUser { get; set; }
+        public virtual BlogUser Moderator { get; set; }
 
     }
 }

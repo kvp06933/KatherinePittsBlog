@@ -21,7 +21,7 @@ namespace KatherinePittsBlog.Models
 
         //Navigation Properties
         public virtual Post Post { get; set; }
-        public virtual IdentityUser BlogUser { get; set; }
+        public virtual BlogUser BlogUser { get; set; }
        
     }
 }
